@@ -1,0 +1,19 @@
+name: Hello world worklow
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "hello world"
+  
+  goobye_world:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "goodbye world"
+        shell: bash
